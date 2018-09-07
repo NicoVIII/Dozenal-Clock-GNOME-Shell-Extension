@@ -1,4 +1,5 @@
 # Dozenal-Clock: GNOME-Shell-Extension
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/3bffc3ddea1d4ee2b086ca25f04ae843)](https://app.codacy.com/app/NicoVIII/Dozenal-Clock-GNOME-Shell-Extension?utm_source=github.com&utm_medium=referral&utm_content=NicoVIII/Dozenal-Clock-GNOME-Shell-Extension&utm_campaign=Badge_Grade_Dashboard)
 [![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active)
 [![GitHub Release](https://img.shields.io/github/release/NicoVIII/Dozenal-Clock-GNOME-Shell-Extension.svg)]()
 [![Github Pre-Release](https://img.shields.io/github/release/NicoVIII/Dozenal-Clock-GNOME-Shell-Extension/all.svg?label=prerelease)]()
