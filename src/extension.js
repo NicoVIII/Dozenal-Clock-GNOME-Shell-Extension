@@ -55,7 +55,7 @@ function clockOverride(label) {
     // Convert to dozenal
     var now = GLib.DateTime.new_now_local();
     let time = convertDecimalToDozenalTime(now.get_hour(), now.get_minute(), now.get_second());
-    desired = text.replace(/\s\d\d?‎[^\s\w]+\d\d([^\s\w]+\d\d)?/, " " + time);
+    desired = text.replace(/\s\d\d?‎[^\s\w\d]+\d\d([^\s\w\d]+\d\d)?/, " " + time);
 
     if (text !== desired) {
         last = text;
