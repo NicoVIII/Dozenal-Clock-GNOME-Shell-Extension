@@ -3,6 +3,7 @@
     "description": "Converts the clock to a dozenal one",
     "uuid": "dozenalclock@nicoviii.eu",
     "url": "https://gitlab.com/NicoVIII/Dozenal-Clock-GNOME-Shell-Extension",
+    "settings-schema": "org.gnome.shell.extensions.dozenal-clock",
     "shell-version": [
         "3.28.1"
     ]

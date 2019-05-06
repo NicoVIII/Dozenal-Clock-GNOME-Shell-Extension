@@ -4,8 +4,11 @@
  *
  * @license MIT
  *
- * I was inspired by code from https://github.com/stuartlangridge/gnome-shell-clock-override
- * License: https://github.com/stuartlangridge/gnome-shell-clock-override/blob/master/LICENSE
+ * I was inspired by code from
+ * https://github.com/stuartlangridge/gnome-shell-clock-override
+ *
+ * Licenses of those projects
+ * https://github.com/stuartlangridge/gnome-shell-clock-override/blob/master/LICENSE
  */
 
 declare var imports: any;
@@ -77,6 +80,7 @@ function enable() {
     }
     last = label.get_text();
     signalHandlerID = label.connect("notify::text", clockOverride);
+
     clockOverride(label);
 }
 

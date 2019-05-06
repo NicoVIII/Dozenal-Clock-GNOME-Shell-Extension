@@ -1,7 +1,6 @@
 {
     "compilerOptions": {
         "module": "system",
-        "removeComments": true,
         "strict": true,
         "target": "es6"
     }

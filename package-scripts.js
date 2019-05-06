@@ -1,13 +1,15 @@
 const {series, concurrent, copy} = require("nps-utils");
 
-let uuid = "dozenalclock@nicoviii.eu";
-let tarName = "dozenal-clock-gnome-shell-extension";
+const version = "v0.1.0"; // TODO: Replace e.g. __VERSION__ in .ts files with variable
+
+const uuid = "dozenalclock@nicoviii.eu";
+const tarName = "dozenal-clock-gnome-shell-extension";
 
 module.exports = {
   scripts: {
     /* Main tasks */
     build: {
-      script: series.nps("compile", "uglify", "copy"),
+      script: series.nps("compile", /*"uglify", */"copy"),
     },
     publish: {
       script: series.nps("build", "pack"),
@@ -15,10 +17,16 @@ module.exports = {
 
     /* Subtasks: Build */
     compile: {
-      script: "tsc -p src/ts --outFile out/extension.js",
+      script: series.nps("compileCode", "compileSchema"),
+    },
+    compileCode: {
+      script: "tsc -p src/ts --outDir out/",
+    },
+    compileSchema: {
+      script: "glib-compile-schemas --targetdir=./out/schemas/ ./src/schemas/",
     },
     copy: {
-      script: copy("src/metadata.json out/"),
+      script: copy("src/metadata.json out/") + " && " + copy("src/schemas/* out/schemas/"),
     },
     uglify: {
       script: "uglifyjs -m -o out/extension.js --comments -- out/extension.js",
